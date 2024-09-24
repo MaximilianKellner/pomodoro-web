@@ -11,8 +11,9 @@ body{
     font-size: 16px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     height: 100vh;
+    overflow: hidden;
 }
 
 main{
@@ -32,7 +33,7 @@ section{
 }
 
 button{
-    background-color: var(--background-color-light);
+    background-color: var(--button-color);
     padding: 10px ;
     border: none;
     color: var(--text-color);
@@ -47,15 +48,15 @@ button{
 
 .roundButton {
     border-radius: 100%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px;
 
     img{
-        width: 25px;
+        width: 22px;
     }
 
     &:not(:last-child){
@@ -95,12 +96,8 @@ button{
     color: var(--text-dark);
 }
 
-#todoSection{
-    background-color: var(--background-color-light);
-    color: var(--text-color);
-}
-
 .timer-circle {
+    margin: 40px 0;
     width: 200px;
     height: 200px;
     border: 10px solid var(--accent-color);
@@ -115,28 +112,38 @@ button{
     text-align: center;
 }
 
+#todoSection{
+    background-color: var(--background-color-light);
+    color: var(--text-color);
+    height: 100%;
+}
+
 .tabbarList{
     display: none;
     width: 100%;
+    height: 100%;
     padding: 15px;
-    box-sizing: border-box; /* Optional, aber empfohlen */
+    box-sizing: border-box;
     
     &.active{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        height: 50vh;
+        justify-content: start;
+        overflow-y: auto;
     }
 }
 
 .tabbarItem{
     background-color: #2b2d46;
     border-radius: 10px;
-    display: inline-flex;
-    height: 40px;
+    display: flex;
     align-items: center;
     min-width: fit-content;
-    width: 100%;
+    width: 100%;  
+    min-height: 40px;
 
     &:not(:last-child){
         margin-bottom: 15px;
