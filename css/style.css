@@ -118,7 +118,9 @@ button{
 .tabbarList{
     display: none;
     width: 100%;
-
+    padding: 15px;
+    box-sizing: border-box; /* Optional, aber empfohlen */
+    
     &.active{
         display: flex;
         flex-direction: column;
@@ -130,11 +132,10 @@ button{
 .tabbarItem{
     background-color: #2b2d46;
     border-radius: 10px;
-    display: flex;
-    min-width: fit-content;
+    display: inline-flex;
     height: 40px;
     align-items: center;
-    margin-right: 15px;
+    min-width: fit-content;
     width: 100%;
 
     &:not(:last-child){
