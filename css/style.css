@@ -1,0 +1,139 @@
+/* set color and font size for the whole document*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main{
+    width: 100%;
+    max-width: 800px;
+}
+
+li{
+    list-style: none;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    background-color: var(--background-color-light);
+    padding: 10px ;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.button-row{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.roundButton {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+    img{
+        width: 25px;
+    }
+
+    &:not(:last-child){
+        margin-right: 20px;
+    }
+}
+
+.tabButton{
+    background-color: var(--background-color);
+    padding: 10px 20px;
+    width:  100%;
+
+    h3{
+        /*underline the active tab*/
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+    }
+
+    &.active h3{
+        border-color: var(--accent-color);
+    }
+
+    &:hover{
+        background-color: var(--background-color-light);
+    }
+}
+
+.time{
+    font-size: 40px;
+}
+
+.workphase{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+#todoSection{
+    background-color: var(--background-color-light);
+    color: var(--text-color);
+}
+
+.timer-circle {
+    width: 200px;
+    height: 200px;
+    border: 10px solid var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.timer-content {
+    text-align: center;
+}
+
+.tabbarItem{
+    background-color: red;
+    border-radius: 10px;
+    width: 75%;
+    display: inline-flex;
+    margin: 10px 20px;
+    padding: 10px;
+
+    p{
+        width: 100%;
+        background-color: rebeccapurple;
+    }
+}
+
+.tabbarItem::after{
+    
+    content: 'redasd';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}

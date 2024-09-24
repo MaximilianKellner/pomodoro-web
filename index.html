@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Pomodoro Main Screen</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/variables.css">
+</head>
+<body>
+ 
+<main>
+
+<section>
+    <div class="timer-circle">
+        <div class="timer-content">
+            <p class="time">25:00</p>
+            <h1 class="workphase">Arbeit</h1>
+        </div>
+    </div>
+    <!--  clean code button row-->
+    <div class="button-row">
+        <button class = "roundButton"><img src="./ressources/play.svg" alt="play/pause"></button>
+    <button class = "roundButton"><img src="./ressources/settings.svg" alt="Settings"></button>
+    <button class = "roundButton"><img src="./ressources/restart.svg" alt="reset"></button>
+    </div>
+</section>
+
+<section id="todoSection">
+    <nav class="button-row">
+            <button class="tabButton"> <h3>Uni</h3> </button>
+            <button class="tabButton"> <h3>Privat</h3> </button>
+            <button class="tabButton"> <h3>Arbeit</h3> </button>
+    </nav>
+
+    <ul class="tabbarList">
+        <li class="tabbarItem">  <input type="checkbox"> <p>Taks 1</p></li>
+        <li class="tabbarItem">  <input type="checkbox"> <p>Taks 1</p></li>
+        <li class="tabbarItem">  <input type="checkbox"> <p>Taks 1</p></li>
+    </ul>
+
+</section>
+
+</main>
+<footer></footer>
+
+</body>
+
+</html>
