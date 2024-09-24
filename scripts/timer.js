@@ -1,11 +1,10 @@
 let workTime = 25 * 60; // 25 Minuten in Sekunden
 let breakTime = 5 * 60; // 5 Minuten in Sekunden
+let isRunning = false;
 let isWorkPhase = true;
 let timeLeft = workTime;
 let timerInterval;
-let isRunning = false;
 const icon = document.getElementById('play-pause');
-
 
 function toggleTimer() {
     if (isRunning) {
@@ -42,6 +41,7 @@ function resetTimer() {
     timeLeft = workTime;
     document.querySelector('.time').textContent = '25:00';
     document.querySelector('.workphase').textContent = 'Arbeit';
+    changePlayPauseIcon();
 }
 
 function updateTimer() {
