@@ -67,6 +67,8 @@ button{
     background-color: var(--background-color);
     padding: 10px 20px;
     width:  100%;
+    display: flex;
+    justify-content: center;
 
     h3{
         /*underline the active tab*/
@@ -115,34 +117,40 @@ button{
 
 .tabbarList{
     display: none;
+    width: 100%;
 
     &.active{
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
 
 .tabbarItem{
     background-color: #2b2d46;
     border-radius: 10px;
+    display: flex;
+    min-width: fit-content;
+    height: 40px;
+    align-items: center;
+    margin-right: 15px;
     width: 100%;
-    display: inline-flex;
-    margin: 10px 20px;
-    padding: 10px;
+
+    &:not(:last-child){
+        margin-bottom: 15px;
+    }
 
     p{
-        margin: 0 10px ; 
-        width: 100%;
+        margin: 0 15px;
     }
 
     input{
+        margin-left: 15px;
+
         &:checked + p{
             text-decoration: line-through;
             color: var(--text-dark);
-        }
-
-        /*color the checkmark*/
-        &:checked + p::before{
-            color: var(--accent-color);
         }
     }
 }

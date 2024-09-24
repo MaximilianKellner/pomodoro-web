@@ -4,6 +4,8 @@ let isWorkPhase = true;
 let timeLeft = workTime;
 let timerInterval;
 let isRunning = false;
+const icon = document.getElementById('play-pause');
+
 
 function toggleTimer() {
     if (isRunning) {
@@ -14,12 +16,24 @@ function toggleTimer() {
     isRunning = !isRunning;
 }
 
+function changePlayPauseIcon() {
+    // Wenn der Timer läuft, zeige das Pause-Icon /ressources/icons/pause.svg
+    if (isRunning) {
+        icon.src = './ressources/play.svg';
+    } else {
+        icon.src = './ressources/pause.svg';
+    }
+
+}
+
 function startTimer() {
     timerInterval = setInterval(updateTimer, 1000);
+    changePlayPauseIcon();
 }
 
 function pauseTimer() {
     clearInterval(timerInterval);
+    changePlayPauseIcon();
 }
 
 function resetTimer() {
@@ -35,7 +49,6 @@ function updateTimer() {
     let seconds = timeLeft % 60;
     document.querySelector('.time').textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     timeLeft--;
-    console.log(timeLeft);
 
     if (timeLeft < 0) {
         isWorkPhase = !isWorkPhase;
