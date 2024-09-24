@@ -113,27 +113,36 @@ button{
     text-align: center;
 }
 
+.tabbarList{
+    display: none;
+
+    &.active{
+        display: block;
+    }
+}
+
 .tabbarItem{
-    background-color: red;
+    background-color: #2b2d46;
     border-radius: 10px;
-    width: 75%;
+    width: 100%;
     display: inline-flex;
     margin: 10px 20px;
     padding: 10px;
 
     p{
+        margin: 0 10px ; 
         width: 100%;
-        background-color: rebeccapurple;
     }
-}
 
-.tabbarItem::after{
-    
-    content: 'redasd';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: var(--accent-color);
-    transform: scaleX(0);
-    transition: transform 0.3s;
+    input{
+        &:checked + p{
+            text-decoration: line-through;
+            color: var(--text-dark);
+        }
+
+        /*color the checkmark*/
+        &:checked + p::before{
+            color: var(--accent-color);
+        }
+    }
 }

@@ -4,9 +4,13 @@
     <title>Pomodoro Main Screen</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+    <!--  Favicon -->
+    <link rel="icon" href="./ressources/timer.svg">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/variables.css">
+
+    <script src="./scripts/tabbar.js" defer></script>
+    <script src="./scripts/timer.js" defer></script>
 </head>
 <body>
  
@@ -21,25 +25,36 @@
     </div>
     <!--  clean code button row-->
     <div class="button-row">
-        <button class = "roundButton"><img src="./ressources/play.svg" alt="play/pause"></button>
-    <button class = "roundButton"><img src="./ressources/settings.svg" alt="Settings"></button>
-    <button class = "roundButton"><img src="./ressources/restart.svg" alt="reset"></button>
+        <button class = "roundButton" onclick="toggleTimer()"><img src="./ressources/play.svg" alt="play/pause"></button>
+    <button class = "roundButton" ><img src="./ressources/settings.svg" alt="Settings"></button>
+    <button class = "roundButton" onclick="resetTimer()"><img src="./ressources/restart.svg" alt="reset"></button>
     </div>
 </section>
 
 <section id="todoSection">
     <nav class="button-row">
-            <button class="tabButton"> <h3>Uni</h3> </button>
-            <button class="tabButton"> <h3>Privat</h3> </button>
-            <button class="tabButton"> <h3>Arbeit</h3> </button>
+            <button class="tabButton active" onclick="openTab(event,'Uni')"> <h3>Uni</h3> </button>
+            <button class="tabButton" onclick="openTab(event,'Privat')"> <h3>Privat</h3> </button>
+            <button class="tabButton" onclick="openTab(event,'Arbeit')"> <h3>Arbeit</h3> </button>
     </nav>
 
-    <ul class="tabbarList">
-        <li class="tabbarItem">  <input type="checkbox"> <p>Taks 1</p></li>
-        <li class="tabbarItem">  <input type="checkbox"> <p>Taks 1</p></li>
-        <li class="tabbarItem">  <input type="checkbox"> <p>Taks 1</p></li>
+    <ul id="Uni" class="tabbarList active">
+        <li class="tabbarItem">  <input type="checkbox" class="styled-checkbox"> <p>Taks 1</p></li>
+        <li class="tabbarItem">  <input type="checkbox" class="styled-checkbox"> <p>Taks 1</p></li>
+        <li class="tabbarItem">  <input type="checkbox" class="styled-checkbox"> <p>Taks 1</p></li>
     </ul>
 
+    <ul id="Privat" class="tabbarList">
+        <li class="tabbarItem">  <input type="checkbox" class="styled-checkbox"> <p>Taks 1</p></li>
+        <li class="tabbarItem">  <input type="checkbox" class="styled-checkbox"> <p>Taks 1</p></li>
+        <li class="tabbarItem">  <input type="checkbox" class="styled-checkbox"> <p>Taks 1</p></li>
+    </ul>
+
+    <ul id="Arbeit" class="tabbarList">
+        <li class="tabbarItem">  <input type="checkbox" class="styled-checkbox"> <p>Taks 1</p></li>
+        <li class="tabbarItem">  <input type="checkbox" class="styled-checkbox"> <p>Taks 1</p></li>
+        <li class="tabbarItem">  <input type="checkbox" class="styled-checkbox"> <p>Taks 1</p></li>
+    </ul>
 </section>
 
 </main>
