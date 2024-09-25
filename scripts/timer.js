@@ -13,26 +13,24 @@ function toggleTimer() {
         startTimer();
     }
     isRunning = !isRunning;
+    changePlayPauseIcon();
 }
 
 function changePlayPauseIcon() {
     // Wenn der Timer läuft, zeige das Pause-Icon /ressources/icons/pause.svg
     if (isRunning) {
-        icon.src = './ressources/play.svg';
-    } else {
         icon.src = './ressources/pause.svg';
+    } else {
+        icon.src = './ressources/play.svg';
     }
-
 }
 
 function startTimer() {
     timerInterval = setInterval(updateTimer, 1000);
-    changePlayPauseIcon();
 }
 
 function pauseTimer() {
     clearInterval(timerInterval);
-    changePlayPauseIcon();
 }
 
 function resetTimer() {
@@ -41,6 +39,7 @@ function resetTimer() {
     timeLeft = workTime;
     document.querySelector('.time').textContent = '25:00';
     document.querySelector('.workphase').textContent = 'Arbeit';
+    isRunning = false;
     changePlayPauseIcon();
 }
 
@@ -56,8 +55,3 @@ function updateTimer() {
         document.querySelector('.workphase').textContent = isWorkPhase ? 'Arbeit' : 'Pause';
     }
 }
-
-// Beispielaufrufe
-//startTimer();
-// pauseTimer();
-// resetTimer();
