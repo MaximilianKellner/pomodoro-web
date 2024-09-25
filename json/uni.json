@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Vorlesung vorbereiten",
+        "completed": false
+    },
+    {
+        "title": "Hausaufgaben korrigieren",
+        "completed": true
+    },
+    {
+        "title": "Forschungspapier lesen",
+        "completed": false
+    },
+    {
+        "title": "Laborbericht schreiben",
+        "completed": true
+    },
+    {
+        "title": "Projektbesprechung",
+        "completed": false
+    }
+]

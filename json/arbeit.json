@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Meeting mit dem Team",
+        "completed": false
+    },
+    {
+        "title": "Projektplan erstellen",
+        "completed": true
+    },
+    {
+        "title": "Kundenpräsentation vorbereiten",
+        "completed": false
+    },
+    {
+        "title": "Code-Review durchführen",
+        "completed": true
+    },
+    {
+        "title": "Wöchentlicher Bericht schreiben",
+        "completed": false
+    }
+]
