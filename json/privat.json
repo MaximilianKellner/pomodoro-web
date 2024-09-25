@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "title": "Einkaufen gehen",
+        "completed": false
+    },
+    {
+        "id": 2,
+        "title": "Hausaufgaben machen",
+        "completed": true
+    },
+    {
+        "id": 3,
+        "title": "Auto waschen",
+        "completed": false
+    },
+    {
+        "id": 4,
+        "title": "Freunde treffen",
+        "completed": true
+    }
+]
